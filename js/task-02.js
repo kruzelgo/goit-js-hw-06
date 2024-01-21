@@ -11,12 +11,13 @@ const ingredients = [
 // const ingredientsList = document.createElement("ingredients");
 console.log(ingredientsList);
 
-ingredients.forEach((ingredient) => {
+const items = ingredients.map((ingredient) => {
   const listElement = document.createElement("li");
 
   listElement.textContent = ingredient;
 
   listElement.classList.add("item");
 
-  ingredientsList.append(listElement);
+  return listElement;
 });
+ingredientsList.append(...items);
